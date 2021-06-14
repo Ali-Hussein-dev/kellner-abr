@@ -1,0 +1,25 @@
+{
+  "short_name": "Garto-Abr",
+  "name": "Garto-Abr",
+  "description": "",
+  "display": "standalone",
+  "scope": "/",
+  "orientation": "any",
+  "start_url": "/",
+  "theme_color": "#0ea5e9",
+  "background_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "puspose": "any maskable"
+    },
+    {
+      "src": "/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "puspose": "any maskable"
+    }
+  ]
+}

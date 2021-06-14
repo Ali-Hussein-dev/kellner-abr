@@ -1,7 +1,6 @@
-module.exports = {
-  // allows tests inside pages folder:
-  webpack: (config, { webpack }) => {
-    config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
-    return config;
-  },
-};
+const withPlugins = require('next-compose-plugins');
+const withPWA = require('next-pwa');
+
+module.exports = withPlugins([
+  [withPWA({ future: { webpack5: true }, pwa: { dest: 'public' } })],
+]);

@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
             onChange={(e) => setUmsatz(+e.target.value)}
           />
         </InputGroup>
-        <div className="px-4 pt-2 mb-8 rounded-lg bg-blueGray-200">
+        <div className="px-4 py-2 mb-8 rounded-lg bg-blueGray-200">
           <Pair
             label="Bargeld "
             value={umsatz < totalCredit ? 0 : umsatz - totalCredit}
