@@ -28,7 +28,7 @@ export const InputList: React.FC<{
   //======================================return
   return (
     <Accordion allowMultiple allowToggle>
-      <AccordionItem className="w-full">
+      <AccordionItem className="w-full border-none">
         <AccordionButton
           className="flex justify-between px-2 rounded bg-lightBlue-400 hover:bg-lightBlue-500 focus:outline-none text-blueGray-700"
           _hover={{}}
