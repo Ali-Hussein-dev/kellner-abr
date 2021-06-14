@@ -17,6 +17,7 @@ const MyApp: React.FC<{ Component: React.FC; pageProps: any }> = ({
 }): JSX.Element => {
   return (
     <ChakraProvider theme={theme}>
+      <title>Gastro-Abr</title>
       <link rel="icon" href="/favicon.ico" />
       <title>Nextjs-boilerplate</title>
       <Component {...pageProps} />
