@@ -30,11 +30,19 @@ export const InputList: React.FC<{
     <Accordion allowMultiple allowToggle>
       <AccordionItem className="w-full border-none">
         <AccordionButton
-          className="flex justify-between px-2 rounded bg-lightBlue-400 hover:bg-lightBlue-500 focus:outline-none text-blueGray-700"
+          className={`flex justify-between px-2 rounded-lg ${
+            i !== 5 ? 'bg-lightBlue-400' : 'bg-warmGray-600'
+          } hover:shadow-lg focus:outline-none`}
           _hover={{}}
           _focus={{}}
         >
-          <h2 className="text-lightBlue-700">{label} </h2>
+          <h2
+            className={`${
+              i !== 5 ? 'text-lightBlue-700' : 'text-warmGray-800'
+            }`}
+          >
+            {label}
+          </h2>
           <span className="text-white">{calcTotal(fieldValues)}</span>
         </AccordionButton>
         <AccordionPanel>
