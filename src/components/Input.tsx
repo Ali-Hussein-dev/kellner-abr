@@ -2,17 +2,18 @@ import * as React from 'react';
 //=======================
 interface InputProps {
   i: number;
-  value: any;
+  value: number;
   setValue: (prvState: any) => void;
 }
 export const Input: React.FC<InputProps> = ({ i, value, setValue }) => {
   return (
     <input
       type="number"
-      value={value || 0}
+      placeholder="0"
+      value={value}
       onChange={(e) =>
         setValue((prvState) => {
-          return { ...prvState, [i]: e.target.value };
+          return { ...prvState, [i]: e.target.value ?? 0 };
         })
       }
       className="border-none rounded focus:ring-1 bg-blueGray-200"
