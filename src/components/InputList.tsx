@@ -50,7 +50,8 @@ export const InputList: React.FC<{
           </div>
           <div className="flex gap-x-2">
             <button
-              className="flex-grow py-1 font-bold text-orange-500 rounded bg-blueGray-100 focus:ring-1 focus:outline-none press-effect-1"
+              className="flex-grow py-1 font-bold text-orange-500 rounded bg-blueGray-100 focus:ring-1 focus:outline-none press-effect-1 disabled:text-blueGray-300 disabled:cursor-not-allowed"
+              disabled={fields === 0}
               onClick={() =>
                 setFields((fields) => {
                   delete fieldValues[fields - 1];
@@ -63,6 +64,7 @@ export const InputList: React.FC<{
             <button
               className="flex-grow py-1 font-bold rounded bg-blueGray-100 text-lightBlue-500 focus:ring-1 focus:outline-none press-effect-1"
               onClick={() => setFields((fields) => fields + 1)}
+              disabled={fields > 100}
             >
               +
             </button>
