@@ -17,7 +17,7 @@ export const Pair: React.FC<{ label: string; value: number }> = ({
 };
 //=======================
 const HomePage: React.FC = () => {
-  const [umsatz, setUmsatz] = React.useState(0);
+  const [umsatz, setUmsatz] = React.useState<number | undefined>();
   const [totalCredit, setTotalCredit] = React.useState(0);
   return (
     <main className="flex flex-col items-center w-full min-h-screen px-2 py-3 text-blueGray-500">
@@ -35,23 +35,31 @@ const HomePage: React.FC = () => {
             placeholder="0"
             type="number"
             value={umsatz}
-            onChange={(e) => setUmsatz(+e.target.value)}
+            onChange={(e) => setUmsatz(+e.target.value ?? 0)}
           />
         </InputGroup>
         <div className="px-4 py-2 mb-8 rounded-lg bg-blueGray-200">
           <Pair
             label="Bargeld "
-            value={umsatz < totalCredit ? 0 : umsatz - totalCredit}
+            value={
+              (umsatz ?? 0) < totalCredit ? 0 : (umsatz ?? 0) - totalCredit
+            }
           />
           <Pair
             label="Bargeld + K "
             value={
-              (umsatz < totalCredit ? 0 : umsatz - totalCredit) +
-              Math.ceil(umsatz * 0.015)
+              ((umsatz ?? 0) < totalCredit ? 0 : (umsatz ?? 0) - totalCredit) +
+              Math.ceil((umsatz ?? 0) * 0.015)
             }
           />
-          <Pair label="Küche Tips 1.5%" value={Math.ceil(umsatz * 0.015)} />
-          <Pair label="Runner Tips 0.5%" value={Math.ceil(umsatz * 0.005)} />
+          <Pair
+            label="Küche Tips 1.5%"
+            value={Math.ceil((umsatz ?? 0) * 0.015)}
+          />
+          <Pair
+            label="Runner Tips 0.5%"
+            value={Math.ceil((umsatz ?? 0) * 0.005)}
+          />
         </div>
       </section>
     </main>
