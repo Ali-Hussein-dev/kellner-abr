@@ -15,7 +15,7 @@ export const InputList: React.FC<{
   setTotal: (prvState: any) => void;
   i: number;
 }> = ({ inputFieldsAmount, label, i, setTotal }) => {
-  const [fieldValues, setFieldValues] = React.useState({ 0: 0 });
+  const [fieldValues, setFieldValues] = React.useState({ 0: undefined });
   const [fields, setFields] = React.useState(inputFieldsAmount);
   React.useEffect(() => {
     setTotal((prvState) => {
