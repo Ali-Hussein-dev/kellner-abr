@@ -42,6 +42,9 @@ export const InputList: React.FC<{
             }`}
           >
             {label}
+            <span>
+              -{Object.values(fieldValues).filter((v) => v > 0).length}
+            </span>
           </h2>
           <span className="text-white">{calcTotal(fieldValues)}</span>
         </AccordionButton>
