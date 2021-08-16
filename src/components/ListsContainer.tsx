@@ -29,7 +29,7 @@ export const ListsContainer: React.FC<ListsContainerProps> = ({
         { label: 'VisaCard', inputFieldsAmount: 5 },
         { label: 'AmericanExpress', inputFieldsAmount: 1 },
         { label: 'Sonstiges', inputFieldsAmount: 3 },
-        { label: 'Auslagern', inputFieldsAmount: 1 },
+        { label: 'Auslagen', inputFieldsAmount: 1 },
       ].map((o, i) => {
         return (
           <InputList
@@ -43,7 +43,7 @@ export const ListsContainer: React.FC<ListsContainerProps> = ({
         );
       })}
       <h2 className="py-1 pl-4 font-semibold text-orange-800 bg-blueGray-200">
-        Gesamt ohne Auslagern: {calcTotal(onlyCreditTotal).toFixed(2)}
+        Gesamt ohne Auslagen: {calcTotal(onlyCreditTotal).toFixed(2)}
       </h2>
     </div>
   );
