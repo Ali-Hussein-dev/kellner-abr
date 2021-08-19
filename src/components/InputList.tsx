@@ -32,7 +32,7 @@ export const InputList: React.FC<{
         <AccordionButton
           className={`flex justify-between px-2 rounded-lg ${
             i !== 5 ? 'bg-lightBlue-400' : 'bg-warmGray-600'
-          } hover:shadow-lg focus:outline-none`}
+          } hover:shadow-lg focus:outline-none press-effect-1`}
           _hover={{}}
           _focus={{}}
         >
