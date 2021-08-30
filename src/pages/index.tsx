@@ -29,13 +29,16 @@ const HomePage: React.FC = () => {
         />
       </section>
       <section className="md:w-[650px] w-full">
-        <InputGroup className="mb-2">
-          <InputLeftAddon children="Umsatz" />
-          <Input
+        <InputGroup className="mb-4 border rounded focus-within:ring-blue-400 focus-within:ring-2 border-blueGray-200">
+          <div className="grid w-3/12 h-10 font-semibold bg-blueGray-100 place-items-center">
+            Umsatz
+          </div>
+          <input
             placeholder="0"
             type="number"
             value={umsatz}
             onChange={(e) => setUmsatz(+e.target.value ?? 0)}
+            className="w-full h-10 border-none rounded-r focus:outline-none focus:ring-0"
           />
         </InputGroup>
         <div className="px-4 py-2 mb-8 rounded-lg bg-blueGray-200">
