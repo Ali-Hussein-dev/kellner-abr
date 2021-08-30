@@ -39,17 +39,11 @@ const HomePage: React.FC = () => {
           />
         </InputGroup>
         <div className="px-4 py-2 mb-8 rounded-lg bg-blueGray-200">
-          <Pair
-            label="Bargeld "
-            value={
-              (umsatz ?? 0) < totalCredit ? 0 : (umsatz ?? 0) - totalCredit
-            }
-          />
+          <Pair label="Bargeld " value={(umsatz ?? 0) - totalCredit} />
           <Pair
             label="Bargeld + K "
             value={
-              ((umsatz ?? 0) < totalCredit ? 0 : (umsatz ?? 0) - totalCredit) +
-              Math.ceil((umsatz ?? 0) * 0.015)
+              (umsatz ?? 0) - totalCredit + Math.ceil((umsatz ?? 0) * 0.015)
             }
           />
           <Pair
