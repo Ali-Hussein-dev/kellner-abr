@@ -16,7 +16,7 @@ export const Input: React.FC<InputProps> = ({ i, value, setValue }) => {
           return { ...prvState, [i]: e.target.value ?? 0 };
         })
       }
-      className="border-none rounded focus:ring-1 bg-blueGray-200"
+      className="border-none rounded focus:ring-1 bg-slate-200"
     />
   );
 };
