@@ -1,22 +1,8 @@
-const colors = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   theme: {
-    extend: {
-      colors: {
-        blueGray: colors.blueGray,
-        warmGray: colors.warmGray,
-        trueGray: colors.trueGray,
-        lightBlue: colors.lightBlue,
-        orange: colors.orange,
-      },
-    },
+    extend: {},
   },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require('@tailwindcss/forms')],
 };
