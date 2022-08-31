@@ -11,14 +11,16 @@ import {
 export const InputList: React.FC<{
   inputFieldsAmount: number;
   label: string;
-  total?: any;
+  total?: Record<string, number>;
   setTotal: (prvState: any) => void;
   i: number;
 }> = ({ inputFieldsAmount, label, i, setTotal }) => {
-  const [fieldValues, setFieldValues] = React.useState({ 0: undefined });
+  const [fieldValues, setFieldValues] = React.useState<Record<string, number>>({
+    0: 0,
+  });
   const [fields, setFields] = React.useState(inputFieldsAmount);
   React.useEffect(() => {
-    setTotal((prvState) => {
+    setTotal((prvState: Record<string, number>) => {
       return {
         ...prvState,
         [i]: calcTotal(fieldValues),
@@ -46,11 +48,11 @@ export const InputList: React.FC<{
         </AccordionButton>
         <AccordionPanel>
           <div className="flex flex-col mb-4 gap-y-1">
-            {new Array(fields).fill(0).map((v, i) => (
+            {new Array(fields).fill(0).map((v: number, i) => (
               <Input
                 key={i}
                 i={i}
-                value={fieldValues[i]}
+                value={fieldValues[i] as number}
                 setValue={setFieldValues}
               />
             ))}
