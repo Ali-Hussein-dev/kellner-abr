@@ -1,10 +1,10 @@
 {
-  "name": "nextjs-boilerplate",
-  "decription": "Boilerplate for Nextjs and Typescript",
+  "name": "kellner-abr",
+  "decription": "Rechner für Kellner",
   "version": "0.1.0",
   "private": false,
   "scripts": {
-    "dev": "next build && next dev",
+    "dev": " next dev",
     "build": "next build",
     "start": "next start",
     "check-types": "tsc --noEmit",

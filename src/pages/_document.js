@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-const APP_NAME = 'Garto-Abr';
-const APP_DESCRIPTION = 'Garto-Abr';
+const APP_NAME = 'Kellner-Abr';
+const APP_DESCRIPTION = 'Kellner-Abr';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -11,7 +11,7 @@ export default class extends Document {
 
   render() {
     return (
-      <Html lang="en" dir="ltr">
+      <Html lang="de" dir="ltr">
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="application-name" content={APP_NAME} />
