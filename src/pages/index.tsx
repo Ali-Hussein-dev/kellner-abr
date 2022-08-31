@@ -1,7 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import * as React from 'react';
 import { ListsContainer } from '@/components/index';
-import { Input, InputGroup, InputLeftAddon } from '@chakra-ui/react';
+import { InputGroup } from '@chakra-ui/react';
 
 //=======================
 export const Pair: React.FC<{ label: string; value: number }> = ({
@@ -20,8 +20,7 @@ const HomePage: React.FC = () => {
   const [umsatz, setUmsatz] = React.useState<number | undefined>();
   const [totalCredit, setTotalCredit] = React.useState(0);
   return (
-    <main className="flex flex-col items-center w-full min-h-screen px-2 py-3 text-blueGray-500">
-      <title>Gastro-Abr</title>
+    <main className="flex flex-col items-center w-full min-h-screen px-2 py-3 text-slate-500">
       <section className="flex flex-col w-full mb-8 md:w-[650px] gap-y-2">
         <ListsContainer
           totalCredit={totalCredit}
@@ -29,8 +28,8 @@ const HomePage: React.FC = () => {
         />
       </section>
       <section className="md:w-[650px] w-full">
-        <InputGroup className="mb-4 border rounded focus-within:ring-blue-400 focus-within:ring-2 border-blueGray-200">
-          <div className="grid w-4/12 h-10 font-semibold sm:w-2/12 bg-blueGray-100 place-items-center">
+        <InputGroup className="mb-4 border rounded focus-within:ring-blue-400 focus-within:ring-2 border-slate-200">
+          <div className="grid w-4/12 h-10 font-semibold sm:w-2/12 bg-slate-100 place-items-center">
             Umsatz
           </div>
           <input
@@ -42,7 +41,7 @@ const HomePage: React.FC = () => {
             className="w-8/12 h-10 font-semibold border-none rounded-r sm:w-10/12 focus:outline-none focus:ring-0"
           />
         </InputGroup>
-        <div className="px-4 py-2 mb-8 rounded-lg bg-blueGray-200">
+        <div className="px-4 py-2 mb-8 rounded-lg bg-slate-200">
           <Pair label="Bargeld " value={(umsatz ?? 0) - totalCredit} />
           <Pair
             label="Bargeld + K "

@@ -10,13 +10,13 @@ export const Input: React.FC<InputProps> = ({ i, value, setValue }) => {
     <input
       type="number"
       placeholder="0"
-      value={value}
+      value={value === 0 ? undefined : value}
       onChange={(e) =>
-        setValue((prvState) => {
+        setValue((prvState: Record<string, number>) => {
           return { ...prvState, [i]: e.target.value ?? 0 };
         })
       }
-      className="border-none rounded focus:ring-1 bg-blueGray-200"
+      className="border-none rounded focus:ring-1 bg-slate-200"
     />
   );
 };

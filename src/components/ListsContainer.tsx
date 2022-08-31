@@ -6,6 +6,7 @@ interface ListsContainerProps {
   totalCredit?: number;
   setTotalCredit: (prvState: number) => void;
 }
+
 //=======================
 export const ListsContainer: React.FC<ListsContainerProps> = ({
   setTotalCredit,
@@ -24,7 +25,7 @@ export const ListsContainer: React.FC<ListsContainerProps> = ({
   return (
     <div className="flex flex-col gap-y-3">
       {[
-        { label: 'Giro', inputFieldsAmount: 20 },
+        { label: 'Giro', inputFieldsAmount: 18 },
         { label: 'MasterCard', inputFieldsAmount: 5 },
         { label: 'VisaCard', inputFieldsAmount: 5 },
         { label: 'AmericanExpress', inputFieldsAmount: 1 },
@@ -42,7 +43,7 @@ export const ListsContainer: React.FC<ListsContainerProps> = ({
           />
         );
       })}
-      <h2 className="py-1 pl-4 font-semibold text-orange-800 bg-blueGray-200">
+      <h2 className="py-1 pl-4 font-semibold text-orange-800 bg-slate-200">
         Gesamt ohne Auslagen: {calcTotal(onlyCreditTotal).toFixed(2)}
       </h2>
     </div>
